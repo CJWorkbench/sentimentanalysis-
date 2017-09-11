@@ -1,13 +1,13 @@
 {
-    "name": "Sentiment Analysis", 
+    "name": "Sentiment Analysis",
     "id_name": "nltk_sentiment_analysis",
-    "category": "Text", 
+    "category": "Transform", 
     "icon": "",
     "description": "Select a column to run sentiment analysis on. Sentiment analysis indicates how negative or positive the text is.",
     "parameters": [
         {
-            "name": "Column", 
-            "id_name": "column_name", 
+            "name": "Column",
+            "id_name": "column_name",
             "type": "column"
         }
     ]
