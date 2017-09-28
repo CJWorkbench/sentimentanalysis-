@@ -1,7 +1,7 @@
 {
     "name": "Sentiment Analysis",
     "id_name": "nltk_sentiment_analysis",
-    "category": "Transform",
+    "category": "Analyse",
     "icon": "sentiment",
     "description": "Select a column to run sentiment analysis on. Sentiment analysis indicates how negative or positive the text is.",
     "parameters": [
