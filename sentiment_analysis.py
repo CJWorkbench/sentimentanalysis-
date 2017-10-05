@@ -37,5 +37,5 @@ class SentimentAnalyser:
 
         # add column to existing table
         # table = table.assign(sentiment=pd.Series(np.asarray(sentiment, dtype=np.float32)))
-        table.insert(0, "sentiment", pd.Series(np.asarray(sentiment, dtype=np.float32)))
+        table.insert(0, "Sentiment", pd.Series(np.asarray(sentiment, dtype=np.float32)))
         return table
