@@ -1,9 +1,9 @@
 {
-    "name": "Sentiment Analysis",
+    "name": "Sentiment analysis",
     "id_name": "sentimentanalysis",
     "category": "Analyse",
     "icon": "sentiment",
-    "description": "Select a column to run sentiment analysis on. Sentiment analysis evaluates how negative or positive the text is.",
+    "description": "Evaluates how negative or positive the text in a column is.",
     "parameters": [
         {
             "name": "Column",
