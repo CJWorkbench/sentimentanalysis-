@@ -1,7 +1,7 @@
 {
     "name": "Sentiment analysis",
     "id_name": "sentimentanalysis",
-    "category": "Analyse",
+    "category": "Analyze",
     "icon": "sentiment",
     "description": "Evaluates how negative or positive the text in a column is.",
     "parameters": [
