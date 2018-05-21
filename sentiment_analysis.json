@@ -3,7 +3,7 @@
     "id_name": "sentimentanalysis",
     "category": "Analyze",
     "icon": "sentiment",
-    "description": "Evaluates how negative or positive the text in a column is.",
+    "description": "Evaluates how negative or positive the text in a column is. ",
     "parameters": [
         {
             "name": "Column",
