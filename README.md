@@ -1,10 +1,23 @@
-You'll need to ensure that the below python libraries are installed before you can use this module:
+VADER Sentiment Analysis, using NLTK
 
-```
-nltk==3.2.4
-twython==3.6.0
-```
+## Setting up a test environment
 
-Once installed, run this command to download NLTK corpuses and models:
+1. `pipenv sync`
+2. `pipenv run python -m nltk.downloader vader_lexicon`
 
-`sudo python -m nltk.downloader -d /usr/local/share/nltk_data all`
+## Running tests
+
+`pipenv run python -m unittest discover`
+
+## Developing
+
+1. Write a test case in `test_sentimentanalysis.py`
+2. Make it pass in `sentimentanalysis.py`
+3. Submit a pull request
+
+## Developing within Workbench
+
+1. Install Workbench and run `bin/dev start`
+2. In the Workbench directory, `bin/dev develop-module sentimentanalysis`
+3. Edit this directory; `develop-module` will push the changes to Workbench
+4. Edit parameters to re-render
