@@ -12,8 +12,8 @@ def P(column_name=''):
 
 class SentimentAnalysisTest(unittest.TestCase):
     def test_empty_table(self):
-        result = render(pd.DataFrame({'A': []}), P('A'))
-        expected = pd.DataFrame({'Sentiment': [], 'A': []})
+        result = render(pd.DataFrame({'A': []}, dtype=str), P('A'))
+        expected = pd.DataFrame({'Sentiment': [1.0], 'A': ['a']}).drop(0)
         assert_frame_equal(result, expected)
 
     def test_no_column_no_op(self):
@@ -24,7 +24,7 @@ class SentimentAnalysisTest(unittest.TestCase):
     def test_sentiment(self):
         result = render(pd.DataFrame({'A': ['yes', 'no']}), P('A'))
         expected = pd.DataFrame({
-            'Sentiment': [0.5, -0.5],
+            'Sentiment': [0.4019, -0.296],
             'A': ['yes', 'no']
         })
         assert_frame_equal(result, expected)
@@ -32,7 +32,7 @@ class SentimentAnalysisTest(unittest.TestCase):
     def test_ignore_na(self):
         result = render(pd.DataFrame({'A': [np.nan, 'no']}), P('A'))
         expected = pd.DataFrame({
-            'Sentiment': [np.nan, -0.5],
+            'Sentiment': [np.nan, -0.296],
             'A': [np.nan, 'no']
         })
         assert_frame_equal(result, expected)

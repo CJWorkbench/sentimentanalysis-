@@ -1,6 +1,5 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import numpy as np
-import pandas as pd
 
 
 def render(table, params):
@@ -22,6 +21,7 @@ def render(table, params):
         return sid.polarity_scores(text)['compound']
 
     sentiment = texts.map(_get_sentiment, na_action='ignore')
+    sentiment = sentiment.astype(np.float64)  # in case the table is empty
 
     # add column to existing table
     table.insert(0, "Sentiment", sentiment)
